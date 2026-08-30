@@ -1,0 +1,3524 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 80px;
+    background-color: #fde8ca;
+    font-family: Arial, sans-serif;
+    color: #60351f;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    left:0;
+    height:70px;
+    width: 100%;
+    background-color: #bf7d51;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.menu {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    padding: 2px 5px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 5px;
+    margin: 4px 0;
+}
+
+.menu-box {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 35px;
+
+    border: 2px solid #60351f;
+    background-color: #fde8ca;
+    width: 200px;
+    padding: 0;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.menu:hover .menu-box {
+    display: block;
+}
+.menu-box a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #60351f;
+}
+
+.menu-box a:hover {
+    background-color: #522e1d;
+    color: white;
+}
+
+.menu-box a:last-child {
+    border-bottom: none;
+}
+
+.welcome {
+    padding-top: 50px;
+}
+ 
+.welcome p {
+    font-size: 20px;
+}
+ 
+.welcome h2 {
+    font-size: 45px;
+    font-weight: bold;
+}
+ 
+.line {
+    width: 350px;
+    border-top: 1px solid #9d7258;
+    margin: 20px auto 50px;
+}
+ 
+.periodic-table {
+    width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.element {
+    height: 100px;
+ 
+    border: 1px solid #777;
+ 
+    color: black;
+    text-decoration: none;
+ 
+    display: flex;
+    flex-direction: column;
+ 
+    align-items: center;
+    justify-content: center;
+}
+ 
+.element:hover {
+    color: black;
+    transform: scale(1.03);
+}
+ 
+.element b {
+    font-size: 27px;
+    font-weight: normal;
+}
+ 
+.element small {
+    font-size: 10px;
+}
+ 
+.element span {
+    font-size: 16px;
+    color: white;
+}
+ 
+.h {
+    grid-column: 1;
+}
+ 
+.he {
+    grid-column: 18;
+}
+ 
+.li {
+    grid-column: 1;
+}
+ 
+.be {
+    grid-column: 2;
+}
+ 
+.b {
+    grid-column: 13;
+}
+ 
+.c {
+    grid-column: 14;
+}
+ 
+.n {
+    grid-column: 15;
+}
+ 
+.o {
+    grid-column: 16;
+}
+ 
+.f {
+    grid-column: 17;
+}
+ 
+.ne {
+    grid-column: 18;
+}
+ 
+.na {
+    grid-column: 1;
+}
+ 
+.mg {
+    grid-column: 2;
+}
+ 
+.al {
+    grid-column: 13;
+}
+ 
+.si {
+    grid-column: 14;
+}
+ 
+.p {
+    grid-column: 15;
+}
+ 
+.s {
+    grid-column: 16;
+}
+ 
+.cl {
+    grid-column: 17;
+}
+ 
+.ar {
+    grid-column: 18;
+}
+ 
+.k {
+    grid-column: 1;
+}
+
+.ca {
+    grid-column: 2;
+}
+
+.green {
+    background-color: #dff0bd;
+}
+ 
+.yellow {
+    background-color: #ffdf70;
+}
+ 
+.blue {
+    background-color: #bde8ed;
+}
+ 
+.orange {
+    background-color: #ffc09b;
+}
+ 
+.pink {
+    background-color: #ed7eb5;
+}
+ 
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    gap: 50px;
+ 
+    margin: 50px 60px 30px;
+}
+ 
+.title hr {
+    width: 270px;
+    border: none;
+    border-top: 1px solid #9d7258;
+}
+ 
+.title h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    white-space: nowrap;
+}
+ 
+ 
+ 
+ 
+.about-box {
+    width: 600px;
+    min-height: 180px;
+ 
+    margin: auto;
+ 
+    border: 5px solid #693719;
+    border-radius: 30px;
+ 
+    display: flex;
+    align-items: center;
+ 
+    padding: 20px 35px;
+}
+ 
+.about-box img {
+    width: 150px;
+    height: 150px;
+ 
+    object-fit: contain;
+}
+ 
+.about-box li {
+    color: black;
+    margin: 15px;
+}
+ 
+
+.about-us {
+    padding: 30px 0 50px;
+}
+
+/* Center the whole row */
+.about-us .row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.member-card {
+    background-color: #bf7d51;
+    border-radius: 6px;
+    padding: 25px 20px;
+    text-align: center;
+    color: white;
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.member-card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.member-card h4 {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.member-card p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+}
+
+footer {
+    background-color: #bf7d51;
+    color: white;
+    min-height: 150px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo img {
+    width: 120px;
+    border-radius: 7px;
+}
+
+.footer-text {
+    text-align: center;
+}
+
+.footer-text h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.footer-text p {
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.footer-social p {
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ 
+/* MAIN PAGE */
+ 
+#pg {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 45px 60px;
+}
+ 
+/* BACK BUTTON */
+ 
+#back {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 35px;
+    background: #70401f;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ 
+#back:hover {
+    background: #4f2c17;
+    transform: translateY(-2px);
+}
+ 
+/* INFO CARD */
+ 
+#info {
+    background: #ffffff;
+    border-radius: 22px;
+ 
+    min-height: 350px;
+    padding: 45px 55px;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+ 
+    margin-bottom: 35px;
+ 
+    box-shadow: 0 12px 35px rgba(90, 60, 30, 0.12);
+}
+ 
+/* HYDROGEN IMAGE */
+ 
+#pic {
+    width: 240px;
+    height: 350px;
+    overflow: hidden;
+ 
+    background: #edf9f5;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+ 
+#pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ 
+/* ATOM */
+ 
+#atom {
+    width: 170px;
+    height: 170px;
+ 
+    border: 3px solid #03a0ef;
+    border-radius: 50%;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    position: relative;
+ 
+    box-shadow: 0 0 0 12px rgba(32, 185, 149, 0.06);
+}
+ 
+
+ 
+#atom1 {
+    width: 170px;
+    height: 170px;
+ 
+    border: 3px solid #be1c44;
+    border-radius: 50%;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    position: relative;
+ 
+    box-shadow: 0 0 0 12px rgba(32, 185, 149, 0.06);
+}
+
+
+
+ 
+
+#nuc {
+    width: 105px;
+    height: 105px;
+ 
+    background: linear-gradient(145deg, #6aafe8, #0b779b);
+    border: 3px solid #03a0ef;
+ 
+    border-radius: 50%;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+ 
+    z-index: 2;
+ 
+    box-shadow: 0 10px 25px rgba(0, 150, 120, 0.25);
+}
+
+#nuc1 {
+    width: 105px;
+    height: 105px;
+
+    background: linear-gradient(145deg, #ff9a8b, #ff5fa2);
+    border: 3px solid #e83e7d;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+
+    z-index: 2;
+
+    box-shadow: 0 10px 25px rgba(255, 95, 162, 0.25);
+}
+
+
+
+
+ 
+#el, #el2 { 
+width: 18px; 
+height: 18px; 
+background: #899495; 
+border: 3px solid white; 
+border-radius: 50%; 
+position: absolute; 
+z-index: 3; 
+}
+
+#el {
+    top: -10px;
+    left: 76px;
+}
+
+#el2 {
+    bottom: -10px;
+    left: 76px;
+}
+
+
+/* BASIC INFO */
+ 
+#basic {
+    background: linear-gradient(135deg, #c98254, #b96e42);
+    color: white;
+ 
+    width: 470px;
+ 
+    padding: 32px 40px;
+    border-radius: 18px;
+ 
+    box-shadow: 0 12px 25px rgba(120, 70, 35, 0.18);
+}
+ 
+#basic h2 {
+    text-align: center;
+ 
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+ 
+#basic p {
+    font-size: 18px;
+    line-height: 2;
+}
+ 
+/* HISTORY */
+ 
+#hist {
+    background: #ffffff;
+    border-radius: 22px;
+ 
+    min-height: 300px;
+    padding: 40px 45px;
+ 
+    display: flex;
+    align-items: center;
+    gap: 45px;
+ 
+    margin-bottom: 30px;
+ 
+    box-shadow: 0 10px 30px rgba(90, 60, 30, 0.10);
+}
+ 
+#htxt {
+    flex: 1;
+}
+ 
+#htxt h2 {
+    text-align: left;
+    color: #70452f;
+ 
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+ 
+#htxt p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #5b514b;
+}
+ 
+#hpic {
+    width: 350px;
+    height: 350px;
+ 
+    object-fit: cover;
+ 
+    border-radius: 18px;
+ 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+ 
+/* DROPDOWN */
+ 
+#drop {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+ 
+details {
+    background: #ffffff;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(80, 50, 25, 0.07);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+ 
+details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(80, 50, 25, 0.12);
+}
+ 
+summary {
+    min-height: 58px;
+    padding: 0 22px;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+    cursor: pointer;
+    list-style: none;
+ 
+    font-size: 20px;
+    font-weight: bold;
+    color: #493b32;
+}
+
+.ii{
+    font-size: 17px;
+}
+ 
+summary::-webkit-details-marker {
+    display: none;
+}
+ 
+summary span {
+    font-size: 23px;
+    color: #70401f;
+ 
+    transition: transform 0.4s ease;
+}
+ 
+/* ARROW ROTATION */
+ 
+details[open] summary span {
+    transform: rotate(180deg);
+}
+ 
+/* DROPDOWN CONTENT */
+ 
+details p {
+    padding: 0 22px 20px;
+ 
+    font-size: 14px;
+    line-height: 1.7;
+    color: #665b54;
+}
+ 
+.row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.row2 .col-md-3 {
+    width: 20%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.row2 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.ij span {
+    display: block;
+    opacity: 0;
+    font-size: 17px;
+    transform: translateY(10px);
+}
+
+details[open] .ij span {
+    animation: appear 0.5s ease forwards;
+}
+
+details[open] .ij span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+details[open] .ij span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+details[open] .ij span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+details[open] .ij span:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+details[open] .ij span:nth-child(5) {
+    animation-delay: 0.9s;
+}
+
+details[open] .ij span:nth-child(6) {
+    animation-delay: 1.1s;
+}
+
+details[open] .ij span:nth-child(7) {
+    animation-delay: 1.3s;
+}
+
+details[open] .ij span:nth-child(8) {
+    animation-delay: 1.5s;
+}
+
+details[open] .ij span:nth-child(9) {
+    animation-delay: 1.7s;
+}
+
+
+/* Lithium */
+#li-atom {
+    width: 170px;
+    height: 170px;
+    border: 3px solid #060353;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#li-shell {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #060353;
+    border-radius: 50%;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#li-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #5d54ab, #050e8a);
+    border: 3px solid #060353;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+
+    position: relative;
+    z-index: 2;
+}
+
+.li-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+.li-e1 {
+    top: -8px;
+    left: 52px;
+}
+
+.li-e2 {
+    bottom: -8px;
+    left: 52px;
+}
+
+.li-e3 {
+    top: -33px;
+    left: 52px;
+}
+/* end of lithium */
+
+/* Beryllium */
+#be-atom {
+    width: 170px;
+    height: 170px;
+    border: 3px solid #47636c;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#be-shell {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #47636c;
+    border-radius: 50%;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#be-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #78a9b5, #4d7278);
+    border: 3px solid #47636c;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+.be-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+.be-e1 {
+    top: -8px;
+    left: 52px;
+}
+
+.be-e2 {
+    bottom: -8px;
+    left: 52px;
+}
+
+.be-e3 {
+    top: -33px;
+    left: 52px;
+}
+
+.be-e4 {
+    bottom: -33px;
+    left: 52px;
+}
+/* end of beryllium */
+
+/* Boron */
+#b-atom {
+    width: 170px;
+    height: 170px;
+    border: 3px solid #312e2f;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#b-shell {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #312e2f;
+    border-radius: 50%;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#b-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #cac5c4, #3c3a3b);
+    border: 3px solid #312e2f;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+.b-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+.b-e1 {
+    top: -8px;
+    left: 52px;
+}
+
+.b-e2 {
+    bottom: -8px;
+    left: 52px;
+}
+
+.b-e3 {
+    top: -33px;
+    left: 52px;
+}
+
+.b-e4 {
+    bottom: -28px;
+    left: 20px;
+}
+
+.b-e5 {
+    bottom: -29px;
+    right: 20px;
+}
+/* end of boron */
+
+/* Carbon */
+#c-atom {
+    width: 170px;
+    height: 170px;
+    border: 3px solid #27432f;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#c-shell {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #27432f;
+    border-radius: 50%;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#c-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #34a046, #35622f);
+    border: 3px solid #27432f;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+.c-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+.c-e1 {
+    top: -8px;
+    left: 52px;
+}
+
+.c-e2 {
+    bottom: -8px;
+    left: 52px;
+}
+
+.c-e3 {
+    top: -33px;
+    left: 52px;
+}
+
+.c-e4 {
+    bottom: -33px;
+    left: 52px;
+}
+
+.c-e5 {
+    left: -33px;
+    top: 52px;
+}
+
+.c-e6 {
+    right: -33px;
+    top: 52px;
+}
+/* end of carbon */
+
+/* Nitrogen */
+#n-atom {
+    width: 170px;
+    height: 170px;
+    border: 3px solid #193748;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#n-shell {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #193748;
+    border-radius: 50%;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#n-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #8ed2e4, #4e9ca5);
+    border: 3px solid #193748;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+.n-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* First shell: 2 electrons */
+.n-e1 {
+    top: -8px;
+    left: 52px;
+}
+
+.n-e2 {
+    bottom: -8px;
+    left: 52px;
+}
+
+/* Second shell: 5 electrons */
+.n-e3 {
+    top: -33px;
+    left: 52px;
+}
+
+.n-e4 {
+    right: -33px;
+    top: 52px;
+}
+
+.n-e5 {
+    bottom: -33px;
+    left: 52px;
+}
+
+.n-e6 {
+    left: -33px;
+    top: 52px;
+}
+
+.n-e7 {
+    top: -20px;
+    right: 5px;
+}
+/* end of nitrogen */
+
+/* Oxygen */
+#o-atom {
+    width: 170px;
+    height: 170px;
+    border: 3px solid #e1ab09;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#o-shell {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #e1ab09;
+    border-radius: 50%;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#o-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #ffff8b, #5e3604);
+    border: 3px solid #e1ab09;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+.o-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+.o-e1 {
+    top: -8px;
+    left: 52px;
+}
+
+.o-e2 {
+    bottom: -8px;
+    left: 52px;
+}
+
+/* Second shell: 6 electrons */
+.o-e3 {
+    top: -33px;
+    left: 52px;
+}
+
+.o-e4 {
+    right: -33px;
+    top: 52px;
+}
+
+.o-e5 {
+    bottom: -33px;
+    left: 52px;
+}
+
+.o-e6 {
+    left: -33px;
+    top: 52px;
+}
+
+.o-e7 {
+    top: -22px;
+    right: 5px;
+}
+
+.o-e8 {
+    bottom: 5px;
+    right: -22px;
+}
+/* end of oxygen */
+
+/* Fluorine */
+#f-atom {
+    width: 170px;
+    height: 170px;
+    border: 3px solid #06efb5;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#f-shell {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #06efb5;
+    border-radius: 50%;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#f-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #44e99c, #0e815e);
+    border: 3px solid #06efb5;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+.f-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+.f-e1 {
+    top: -8px;
+    left: 52px;
+}
+
+.f-e2 {
+    bottom: -8px;
+    left: 52px;
+}
+
+.f-e3 {
+    top: -33px;
+    left: 52px;
+}
+
+.f-e4 {
+    right: -33px;
+    top: 52px;
+}
+
+.f-e5 {
+    bottom: -33px;
+    left: 52px;
+}
+
+.f-e6 {
+    left: -33px;
+    top: 52px;
+}
+
+.f-e7 {
+    top: -22px;
+    right: 5px;
+}
+
+.f-e8 {
+    bottom: 5px;
+    right: -22px;
+}
+
+.f-e9 {
+    bottom: 5px;
+    left: -10px;
+}
+/* end of flourine */
+
+/* Neon */
+#ne-atom {
+    width: 170px;
+    height: 170px;
+    border: 3px solid #100b0d;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#ne-shell {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #100b0d;
+    border-radius: 50%;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ne-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #fb04f2, #08ef1f);
+    border: 3px solid #100b0d;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+.ne-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* First shell: 2 electrons */
+.ne-e1 {
+    top: -8px;
+    left: 52px;
+}
+
+.ne-e2 {
+    bottom: -8px;
+    left: 52px;
+}
+
+/* Second shell: 8 electrons */
+.ne-e3 {
+    top: -33px;
+    left: 52px;
+}
+
+.ne-e4 {
+    right: -33px;
+    top: 52px;
+}
+
+.ne-e5 {
+    bottom: -33px;
+    left: 52px;
+}
+
+.ne-e6 {
+    left: -33px;
+    top: 52px;
+}
+
+.ne-e7 {
+    top: -22px;
+    right: 5px;
+}
+
+.ne-e8 {
+    bottom: 5px;
+    right: -22px;
+}
+
+.ne-e9 {
+    bottom: 5px;
+    left: -23px;
+}
+
+.ne-e10 {
+    top: 5px;
+    left: -23px;
+}
+/* end of neon */
+
+/* Sodium */
+#na-atom {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+/* First shell */
+#na-shell1 {
+    width: 110px;
+    height: 110px;
+
+    border: 3px solid #432705;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#na-shell2 {
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid #432705;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+#na-shell3 {
+    width: 190px;
+    height: 190px;
+
+    border: 3px solid #432705;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+/* Nucleus */
+#na-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #987050, #886b52);
+    border: 3px solid #432705;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+.na-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+.na-e1 {
+    top: -8px;
+    left: 47px;
+}
+
+.na-e2 {
+    bottom: -8px;
+    left: 47px;
+}
+
+.na-e3 {
+    top: -8px;
+    left: 67px;
+}
+
+.na-e4 {
+    right: -8px;
+    top: 67px;
+}
+
+.na-e5 {
+    bottom: -9px;
+    left: 67px;
+}
+
+.na-e6 {
+    left: -9px;
+    top: 67px;
+}
+
+.na-e7 {
+    top: 10px;
+    right: 14px;
+}
+
+.na-e8 {
+    bottom: 10px;
+    right: 14px;
+}
+
+.na-e9 {
+    bottom: 10px;
+    left: 14px;
+}
+
+.na-e10 {
+    top: 10px;
+    left: 14px;
+}
+
+
+/* Third shell - 1 electron */
+.na-e11 {
+    top: -9px;
+    left: 87px;
+}
+/* end of sodium */
+
+/* Magnesium */
+#mg-atom {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+/* Shells */
+#mg-shell1 {
+    width: 110px;
+    height: 110px;
+
+    border: 3px solid #330606;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#mg-shell2 {
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid #330606;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#mg-shell3 {
+    width: 190px;
+    height: 190px;
+
+    border: 3px solid #330606;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+/* Nucleus */
+#mg-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #802121, #661316);
+    border: 3px solid #330606;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+
+.mg-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+/* First shell (2) */
+.mg-e1 {
+    top: -8px;
+    left: 47px;
+}
+
+.mg-e2 {
+    bottom: -8px;
+    left: 47px;
+}
+
+
+/* Second shell (8) */
+.mg-e3 {
+    top: -8px;
+    left: 67px;
+}
+
+.mg-e4 {
+    right: -8px;
+    top: 67px;
+}
+
+.mg-e5 {
+    bottom: -9px;
+    left: 67px;
+}
+
+.mg-e6 {
+    left: -9px;
+    top: 67px;
+}
+
+.mg-e7 {
+    top: 10px;
+    right: 14px;
+}
+
+.mg-e8 {
+    bottom: 10px;
+    right: 14px;
+}
+
+.mg-e9 {
+    bottom: 10px;
+    left: 14px;
+}
+
+.mg-e10 {
+    top: 10px;
+    left: 14px;
+}
+
+
+/* Third shell (2) */
+.mg-e11 {
+    top: -9px;
+    left: 87px;
+}
+
+.mg-e12 {
+    bottom: -9px;
+    left: 87px;
+}
+/* end od magnesium */
+
+/* Aluminium */
+#al-atom {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#al-shell1 {
+    width: 110px;
+    height: 110px;
+
+    border: 3px solid #252525;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#al-shell2 {
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid #252525;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#al-shell3 {
+    width: 190px;
+    height: 190px;
+
+    border: 3px solid #252525;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+/* Nucleus */
+#al-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #cdcccb, #6e6d6c);
+    border: 3px solid #252525;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+
+.al-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+/* First shell (2) */
+.al-e1 {
+    top: -8px;
+    left: 47px;
+}
+
+.al-e2 {
+    bottom: -8px;
+    left: 47px;
+}
+
+
+/* Second shell (8) */
+.al-e3 {
+    top: -8px;
+    left: 67px;
+}
+
+.al-e4 {
+    right: -8px;
+    top: 67px;
+}
+
+.al-e5 {
+    bottom: -9px;
+    left: 67px;
+}
+
+.al-e6 {
+    left: -9px;
+    top: 67px;
+}
+
+.al-e7 {
+    top: 10px;
+    right: 14px;
+}
+
+.al-e8 {
+    bottom: 10px;
+    right: 14px;
+}
+
+.al-e9 {
+    bottom: 10px;
+    left: 14px;
+}
+
+.al-e10 {
+    top: 10px;
+    left: 14px;
+}
+
+
+/* Third shell (3) */
+.al-e11 {
+    top: -9px;
+    left: 87px;
+}
+
+.al-e12 {
+    bottom: -9px;
+    left: 87px;
+}
+
+.al-e13 {
+    right: -9px;
+    top: 87px;
+}
+/* end of aluminium */
+
+/* Silicon */
+#si-atom {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+#si-shell1 {
+    width: 110px;
+    height: 110px;
+
+    border: 3px solid #043c12;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+#si-shell2 {
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid #043c12;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+#si-shell3 {
+    width: 190px;
+    height: 190px;
+
+    border: 3px solid #043c12;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+#si-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #5b964c, #195115);
+    border: 3px solid #043c12;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+
+.si-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+/* First shell (2) */
+.si-e1 {
+    top: -8px;
+    left: 47px;
+}
+
+.si-e2 {
+    bottom: -8px;
+    left: 47px;
+}
+
+
+/* Second shell (8) */
+.si-e3 {
+    top: -8px;
+    left: 67px;
+}
+
+.si-e4 {
+    right: -8px;
+    top: 67px;
+}
+
+.si-e5 {
+    bottom: -9px;
+    left: 67px;
+}
+
+.si-e6 {
+    left: -9px;
+    top: 67px;
+}
+
+.si-e7 {
+    top: 10px;
+    right: 14px;
+}
+
+.si-e8 {
+    bottom: 10px;
+    right: 14px;
+}
+
+.si-e9 {
+    bottom: 10px;
+    left: 14px;
+}
+
+.si-e10 {
+    top: 10px;
+    left: 14px;
+}
+
+
+/* Third shell (4) */
+.si-e11 {
+    top: -9px;
+    left: 87px;
+}
+
+.si-e12 {
+    bottom: -9px;
+    left: 87px;
+}
+
+.si-e13 {
+    right: -9px;
+    top: 87px;
+}
+
+.si-e14 {
+    left: -9px;
+    top: 87px;
+}
+/* end os silicon */
+
+/* Phosphorus */
+#p-atom {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* Shells */
+#p-shell1 {
+    width: 110px;
+    height: 110px;
+
+    border: 3px solid #ea5701;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#p-shell2 {
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid #ea5701;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#p-shell3 {
+    width: 190px;
+    height: 190px;
+
+    border: 3px solid #ea5701;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+/* Nucleus */
+#p-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #af6043, #b74705);
+    border: 3px solid #ea5701;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+
+/* Electrons */
+.p-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #958d89;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+/* First shell (2) */
+.p-e1 {
+    top: -8px;
+    left: 47px;
+}
+
+.p-e2 {
+    bottom: -8px;
+    left: 47px;
+}
+
+
+/* Second shell (8) */
+.p-e3 {
+    top: -8px;
+    left: 67px;
+}
+
+.p-e4 {
+    right: -8px;
+    top: 67px;
+}
+
+.p-e5 {
+    bottom: -9px;
+    left: 67px;
+}
+
+.p-e6 {
+    left: -9px;
+    top: 67px;
+}
+
+.p-e7 {
+    top: 10px;
+    right: 14px;
+}
+
+.p-e8 {
+    bottom: 10px;
+    right: 14px;
+}
+
+.p-e9 {
+    bottom: 10px;
+    left: 14px;
+}
+
+.p-e10 {
+    top: 10px;
+    left: 14px;
+}
+
+
+/* Third shell (5) */
+.p-e11 {
+    top: -9px;
+    left: 87px;
+}
+
+.p-e12 {
+    bottom: -9px;
+    left: 87px;
+}
+
+.p-e13 {
+    right: -9px;
+    top: 87px;
+}
+
+.p-e14 {
+    left: -9px;
+    top: 87px;
+}
+
+.p-e15 {
+    top: 40px;
+    right: 1px;
+}
+/* end of Phosphorus */
+
+/* Sulfur */
+#s-atom {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* Shells */
+#s-shell1 {
+    width: 110px;
+    height: 110px;
+    border: 3px solid #718b08;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#s-shell2 {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #718b08;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#s-shell3 {
+    width: 190px;
+    height: 190px;
+    border: 3px solid #718b08;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+/* Nucleus */
+#s-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #f6d365, #abf009);
+    border: 3px solid #718b08;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+
+/* Electrons */
+.s-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+/* First shell (2) */
+.s-e1 {
+    top: -8px;
+    left: 47px;
+}
+
+.s-e2 {
+    bottom: -8px;
+    left: 47px;
+}
+
+
+/* Second shell (8) */
+.s-e3 {
+    top: -8px;
+    left: 67px;
+}
+
+.s-e4 {
+    right: -8px;
+    top: 67px;
+}
+
+.s-e5 {
+    bottom: -9px;
+    left: 67px;
+}
+
+.s-e6 {
+    left: -9px;
+    top: 67px;
+}
+
+.s-e7 {
+    top: 10px;
+    right: 14px;
+}
+
+.s-e8 {
+    bottom: 10px;
+    right: 14px;
+}
+
+.s-e9 {
+    bottom: 10px;
+    left: 14px;
+}
+
+.s-e10 {
+    top: 10px;
+    left: 14px;
+}
+
+
+/* Third shell (6) */
+.s-e11 {
+    top: -9px;
+    left: 87px;
+}
+
+.s-e12 {
+    bottom: -9px;
+    left: 87px;
+}
+
+.s-e13 {
+    right: -9px;
+    top: 87px;
+}
+
+.s-e14 {
+    left: -9px;
+    top: 87px;
+}
+
+.s-e15 {
+    top: 40px;
+    right: 1px;
+}
+
+.s-e16 {
+    bottom: 40px;
+    left: 1px;
+}
+/* end of sulfur */
+
+/* Chlorine */
+#cl-atom {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* Shells */
+#cl-shell1 {
+    width: 110px;
+    height: 110px;
+    border: 3px solid #07e865;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#cl-shell2 {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #07e865;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#cl-shell3 {
+    width: 190px;
+    height: 190px;
+    border: 3px solid #07e865;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+/* Nucleus */
+#cl-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #1fa239, #2182d2);
+    border: 3px solid #07e865;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+
+/* Electrons */
+.cl-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+/* First shell (2) */
+.cl-e1 {
+    top: -8px;
+    left: 47px;
+}
+
+.cl-e2 {
+    bottom: -8px;
+    left: 47px;
+}
+
+
+/* Second shell (8) */
+.cl-e3 {
+    top: -8px;
+    left: 67px;
+}
+
+.cl-e4 {
+    right: -8px;
+    top: 67px;
+}
+
+.cl-e5 {
+    bottom: -9px;
+    left: 67px;
+}
+
+.cl-e6 {
+    left: -9px;
+    top: 67px;
+}
+
+.cl-e7 {
+    top: 10px;
+    right: 14px;
+}
+
+.cl-e8 {
+    bottom: 10px;
+    right: 14px;
+}
+
+.cl-e9 {
+    bottom: 10px;
+    left: 14px;
+}
+
+.cl-e10 {
+    top: 10px;
+    left: 14px;
+}
+
+
+/* Third shell (7) */
+.cl-e11 {
+    top: -9px;
+    left: 87px;
+}
+
+.cl-e12 {
+    bottom: -9px;
+    left: 87px;
+}
+
+.cl-e13 {
+    right: -9px;
+    top: 87px;
+}
+
+.cl-e14 {
+    left: -9px;
+    top: 87px;
+}
+
+.cl-e15 {
+    top: 40px;
+    right: 1px;
+}
+
+.cl-e16 {
+    bottom: 40px;
+    left: 1px;
+}
+
+.cl-e17 {
+    top: 5px;
+    right: 37px;
+}
+/* end of chlorine */
+
+/* Argon */
+#ar-atom {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* Shells */
+#ar-shell1 {
+    width: 110px;
+    height: 110px;
+    border: 3px solid #32186e;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#ar-shell2 {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #32186e;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#ar-shell3 {
+    width: 190px;
+    height: 190px;
+    border: 3px solid #32186e;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+/* Nucleus */
+#ar-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #c9b7ff, #7e57c2);
+    border: 3px solid #32186e;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+
+/* Electrons */
+.ar-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+/* First shell (2) */
+.ar-e1 {
+    top: -8px;
+    left: 47px;
+}
+
+.ar-e2 {
+    bottom: -8px;
+    left: 47px;
+}
+
+
+/* Second shell (8) */
+.ar-e3 {
+    top: -8px;
+    left: 67px;
+}
+
+.ar-e4 {
+    right: -8px;
+    top: 67px;
+}
+
+.ar-e5 {
+    bottom: -9px;
+    left: 67px;
+}
+
+.ar-e6 {
+    left: -9px;
+    top: 67px;
+}
+
+.ar-e7 {
+    top: 10px;
+    right: 14px;
+}
+
+.ar-e8 {
+    bottom: 10px;
+    right: 14px;
+}
+
+.ar-e9 {
+    bottom: 10px;
+    left: 14px;
+}
+
+.ar-e10 {
+    top: 10px;
+    left: 14px;
+}
+
+
+/* Third shell (8) */
+.ar-e11 {
+    top: -9px;
+    left: 87px;
+}
+
+.ar-e12 {
+    bottom: -9px;
+    left: 87px;
+}
+
+.ar-e13 {
+    right: -9px;
+    top: 87px;
+}
+
+.ar-e14 {
+    left: -9px;
+    top: 87px;
+}
+
+.ar-e15 {
+    top: 40px;
+    right: 1px;
+}
+
+.ar-e16 {
+    bottom: 40px;
+    left: 1px;
+}
+
+.ar-e17 {
+    top: 15px;
+    right: 20px;
+}
+
+.ar-e18 {
+    bottom: 15px;
+    left: 20px;
+}
+/* end of argon */
+
+/* Potassium */
+#k-atom {
+    width: 240px;
+    height: 240px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* Shell sizes */
+#k-shell1 {
+    width: 100px;
+    height: 100px;
+
+    border: 3px solid #cbe506;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#k-shell2 {
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid #cbe506;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#k-shell3 {
+    width: 190px;
+    height: 190px;
+
+    border: 3px solid #cbe506;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+#k-shell4 {
+    width: 230px;
+    height: 230px;
+
+    border: 3px solid #cbe506;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+/* Nucleus */
+#k-nucleus {
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #e1ba81, #aef196);
+    border: 3px solid #cbe506;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+
+.k-electron {
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+/* Shell 1 (2) */
+.k-e1 {
+    top: -8px;
+    left: 47px;
+}
+
+.k-e2 {
+    bottom: -8px;
+    left: 47px;
+}
+
+
+/* Shell 2 (8) */
+.k-e3 {
+    top: -8px;
+    left: 67px;
+}
+
+.k-e4 {
+    right: -8px;
+    top: 67px;
+}
+
+.k-e5 {
+    bottom: -9px;
+    left: 67px;
+}
+
+.k-e6 {
+    left: -9px;
+    top: 67px;
+}
+
+.k-e7 {
+    top: 10px;
+    right: 14px;
+}
+
+.k-e8 {
+    bottom: 10px;
+    right: 14px;
+}
+
+.k-e9 {
+    bottom: 10px;
+    left: 14px;
+}
+
+.k-e10 {
+    top: 10px;
+    left: 14px;
+}
+
+
+/* Shell 3 (8) */
+.k-e11 {
+    top: -9px;
+    left: 87px;
+}
+
+.k-e12 {
+    bottom: -9px;
+    left: 87px;
+}
+
+.k-e13 {
+    right: -9px;
+    top: 87px;
+}
+
+.k-e14 {
+    left: -9px;
+    top: 87px;
+}
+
+.k-e15 {
+    top: 40px;
+    right: 1px;
+}
+
+.k-e16 {
+    bottom: 40px;
+    left: 1px;
+}
+
+.k-e17 {
+    top: 15px;
+    right: 20px;
+}
+
+.k-e18 {
+    bottom: 15px;
+    left: 20px;
+}
+
+
+/* Shell 4 (1) */
+.k-e19 {
+    top: -9px;
+    left: 107px;
+}
+/* end of potassium */
+
+/* Calcium */
+#ca-atom {
+    width: 260px;
+    height: 260px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* Shells */
+#ca-shell1 {
+    width: 110px;
+    height: 110px;
+
+    border: 3px solid #432705;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+#ca-shell2 {
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid #432705;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+#ca-shell3 {
+    width: 190px;
+    height: 190px;
+
+    border: 3px solid #432705;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+#ca-shell4 {
+    width: 230px;
+    height: 230px;
+
+    border: 3px solid #432705;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+
+/* Nucleus */
+#ca-nucleus {
+
+    width: 70px;
+    height: 70px;
+
+    background: linear-gradient(145deg, #9ccc65, #dfedb1);
+    border: 3px solid #3f3902;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+}
+
+
+/* Electrons */
+.ca-electron {
+
+    width: 16px;
+    height: 16px;
+
+    background: #899495;
+    border: 2px solid white;
+
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+/* Shell 1 (2 electrons) */
+.ca-e1 {
+    top: -8px;
+    left: 47px;
+}
+
+.ca-e2 {
+    bottom: -8px;
+    left: 47px;
+}
+
+
+/* Shell 2 (8 electrons) */
+.ca-e3 {
+    top: -8px;
+    left: 67px;
+}
+
+.ca-e4 {
+    right: -8px;
+    top: 67px;
+}
+
+.ca-e5 {
+    bottom: -9px;
+    left: 67px;
+}
+
+.ca-e6 {
+    left: -9px;
+    top: 67px;
+}
+
+.ca-e7 {
+    top: 10px;
+    right: 14px;
+}
+
+.ca-e8 {
+    bottom: 10px;
+    right: 14px;
+}
+
+.ca-e9 {
+    bottom: 10px;
+    left: 14px;
+}
+
+.ca-e10 {
+    top: 10px;
+    left: 14px;
+}
+
+
+/* Shell 3 (8 electrons) */
+.ca-e11 {
+    top: -9px;
+    left: 87px;
+}
+
+.ca-e12 {
+    bottom: -9px;
+    left: 87px;
+}
+
+.ca-e13 {
+    right: -9px;
+    top: 87px;
+}
+
+.ca-e14 {
+    left: -9px;
+    top: 87px;
+}
+
+.ca-e15 {
+    top: 40px;
+    right: 1px;
+}
+
+.ca-e16 {
+    bottom: 40px;
+    left: 1px;
+}
+
+.ca-e17 {
+    top: 15px;
+    right: 20px;
+}
+
+.ca-e18 {
+    bottom: 15px;
+    left: 20px;
+}
+
+
+/* Shell 4 (2 electrons) */
+.ca-e19 {
+    top: -9px;
+    left: 107px;
+}
+
+.ca-e20 {
+    bottom: -8px;
+    left: 107px;
+}
+/* end of calcium */
+
+
+
+
+.aboutus-main {
+    padding: 42px 6%;
+}
+
+.aboutus-title-section {
+    text-align: center;
+}
+
+.aboutus-main-title {
+    margin: 0;
+
+    font-size: 36px;
+    font-weight: bold;
+    color: #513525;
+}
+
+.aboutus-subtitle {
+    margin-top: 2px;
+    margin-bottom: 60px;
+
+    font-size: 17px;
+}
+
+.aboutus-intro-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    margin-bottom: 25px;
+}
+
+.aboutus-computer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus-computer-img {
+    width: 350px;
+    height: auto;
+}
+
+.aboutus-intro-container {
+    max-width: 480px;
+}
+
+.aboutus-intro-text {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+.aboutus-description-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    margin-top: -10px;
+}
+
+.aboutus-description-container {
+    max-width: 450px;
+}
+
+.aboutus-description-text {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.6;
+    
+}
+
+.aboutus-atom-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutus-atom-img {
+    width: 350px;
+    height: auto;
+}
+
+
+/* ============================= */
+/* MISSION VISION VALUE */
+/* ============================= */
+
+.aboutus-mvv-section {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 90px;
+    
+}
+
+
+.aboutus-card {
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    background-color: #b8794f;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.aboutus-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.aboutus-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.624),
+        transparent
+    );
+    transform: skewX(-20deg);
+}
+
+.aboutus-card:hover::after {
+    left: 150%;
+    transition: left 0.8s ease;
+}
+/* DARK TOP PART */
+
+.aboutus-card-top {
+    height: 350px;
+    width: 300px;
+    background-color: #6b351b;
+    color: white;
+    padding: 17px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    /* pointed bottom shape */
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 85%,
+        50% 100%,
+        0 85%
+    );
+}
+
+
+/* CARD TEXT */
+
+.aboutus-card-text {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+    
+}
+
+.aboutus-value-text {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.aboutus-card-icon {
+    width: 200px;
+    height: auto;
+    margin-bottom: 70px;
+}
+
+
+.aboutus-card-title {
+    margin: -2px 0 0 0;
+    font-size: 28px;
+    color: #6b351b;
+}
+/* ============================= */
+/* ENDING TEXT */
+/* ============================= */
+
+.aboutus-ending-section {
+    text-align: center;
+
+    margin-top: 105px;
+}
+
+.aboutus-ending-text {
+    margin: 0;
+
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+
+/* end of this  */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
